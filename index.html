@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L’Envers du Look</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+</head>
+<body>
+ 
+    <header>
+        <nav id="navbarre">
+            <img src="Logo l'envers du look.png" alt="">
+            <ul>
+                <li>📰 Accueil</li>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3ekWJRN_kRYk0MwzLGNQVwnQAFmjBLsjYth1N_jLu_fOsoA/viewform?usp=dialog" target="_blank"><li>❓ Quizz</li></a>
+
+            </ul>
+        </nav>
+    </header>
+ 
+ 
+    <div id="container">
+ 
+        <div>
+            <h2>🌍 Fast Fashion : Une catastrophe écologique silencieuse</h2>
+            <p>Chaque année, l’industrie de la mode produit plus de pollution que les vols internationaux et le transport maritime réunis.
+            Derrière les vêtements que nous portons se cache une destruction massive de l’environnement : rivières empoisonnées, tonnes de
+            déchets textiles, et une empreinte carbone colossale.</p>
+        </div>
+ 
+        <div>
+            <h2>💧 L’eau : Une ressource sacrifiée</h2>
+            <p>L’industrie textile est l’une des plus grandes consommatrices d’eau au monde. Pour fabriquer un seul jean, il faut environ 7 000
+                litres d’eau – soit l’équivalent de 50 baignoires remplies.<br>
+                <br>
+            Mais ce n’est pas tout. Les teintures et produits chimiques utilisés dans la fabrication des vêtements sont souvent rejetés dans les
+            rivières sans traitement, transformant des cours d’eau entiers en décharges toxiques. Résultat : des millions de personnes vivant
+            près de ces usines n’ont plus accès à une eau potable saine.</p>
+        </div>
+       
+        <div>
+            <h2>🌪️ Une empreinte carbone dévastatrice</h2>
+            <p>Le textile est responsable de près de 10% des émissions mondiales de CO₂. Pourquoi ?
+                <ol>
+                    <li>La production : Les usines de textile tournent 24h/24, brûlant du charbon et du pétrole pour alimenter leurs machines.</li>
+                    <li>Le transport : Un vêtement parcourt parfois des dizaines de milliers de kilomètres avant d’arriver en boutique, multipliant son empreinte carbone.</li>
+                    <li>Le lavage : À chaque passage en machine, des fibres plastiques microscopiques se détachent et finissent dans l’océan, menaçant la faune marine.</li>
+                </ol>
+            </p>
+        </div>
+ 
+        <div>
+            <h2>🗑️ Une mode jetable qui étouffe la planète</h2>
+            <p>La fast fashion encourage la surconsommation : on achète, on porte une ou deux fois, et on jette. Résultat ?
+                <ul>
+                    <li>92 millions de tonnes de déchets textiles finissent chaque année en décharge.</li>
+                    <li>85% des vêtements produits finissent brûlés ou enfouis.</li>
+                    <li>Moins de 1% des textiles sont recyclés en nouveaux vêtements.</li>
+                </ul>
+                La Terre étouffe sous nos fringues. Et pourtant, les marques continuent de produire plus, toujours plus, au mépris des conséquences.
+            </p>
+        </div>
+ 
+        <div>
+            <h2>⚠️ Greenwashing : Ne vous faites pas avoir !</h2>
+            <p>De plus en plus de marques lancent des collections dites "éco-responsables" ou "durables". Mais en réalité, beaucoup ne sont que de la poudre aux yeux : une infime partie des produits sont réellement éthiques, tandis que le reste de la production continue de polluer massivement.</p>
+        </div>
+ 
+        <div>
+            <h2>🛑 Il est temps d’agir !</h2>
+            <p> Nous avons le pouvoir de changer les choses :<br>
+                ✅ Acheter moins, mais mieux : Optez pour des vêtements de qualité qui durent.<br>
+                ✅ Privilégier la seconde main : Friperies, échanges, recyclage.<br>
+                ✅ Exiger la transparence : Informez-vous sur les marques et boycottez celles qui exploitent sans scrupules.<br>
+                <br>
+                Chaque achat est un vote. Ne laissons pas l’industrie textile détruire notre planète en silence.</p>
+        </div>
+    </div>
+    <footer>
+        <div id="magazine-section">
+            <h2>📚 Découvrez notre magazine</h2>
+            <p>Vous trouverez ici un magazine qui représente la fast fashion, ses impacts sur l’environnement et les conditions de travail dans l'industrie textile.</p>
+            <button id="open-magazine">Lire le magazine</button>
+        </div>
+    </footer>
+
+    <div id="magazine-viewer" class="hidden">
+        <button id="close-magazine">Fermer</button>
+        <div id="magazine-content">
+            <button id="prev-page" class="nav-btn">←</button>
+            <div id="magazine-pages"></div>
+            <button id="next-page" class="nav-btn">→</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

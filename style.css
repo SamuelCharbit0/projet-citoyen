@@ -1,0 +1,236 @@
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    background-image: url(DALL·E\ 2025-02-06\ 15.27.37.webp);
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+#navbarre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(80, 80, 80, 0.8);
+    color: white;
+    padding: 15px 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 70px;
+}
+
+#navbarre img {
+    width: 116px;
+    height: 116px;
+}
+
+#navbarre ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+#navbarre ul li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#navbarre ul li:hover {
+    color: #FFD700;
+    transform: scale(1.1);
+}
+
+#navbarre a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#navbarre a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+#navbarre a li {
+    list-style: none;
+}
+
+#container {
+    margin-top: 150px;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#container p {
+    line-height: 1.8;
+    font-size: 18px;
+    color: #333;
+}
+
+#container h2 {
+    color: #005a4a;
+    border-left: 5px solid #FFD700;
+    padding-left: 10px;
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+#container > div {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+footer {
+    background-color: rgba(80, 80, 80, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+#magazine-section {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#magazine-section h2 {
+    color: #FFD700;
+    font-size: 28px;
+}
+
+#magazine-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Bouton "Lire le magazine" */
+#open-magazine {
+    background-color: #FFD700;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+#open-magazine:hover {
+    background-color: #e5c800;
+}
+
+/* Conteneur principal du magazine */
+#magazine-viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000; /* Priorité absolue */
+}
+
+#magazine-viewer.hidden {
+    display: none;
+}
+
+/* Conteneur du magazine */
+#magazine-content {
+    width: 80%;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+/* Flèches de navigation */
+.nav-btn {
+    position: absolute; /* Correction pour éviter d'être fixées sur toute la page */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #FFD700;
+    color: #333;
+    border: 2px solid #FFD700;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 35px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Priorité mais pas exagérée */
+}
+
+/* Correction des positions */
+#prev-page {
+    left: 5%;
+}
+
+#next-page {
+    right: 5%;
+}
+
+/* Ajustement des flèches pour la première et dernière page */
+#magazine-content.single-page #prev-page {
+    display: none; /* Pas de flèche gauche sur la première page */
+}
+
+#magazine-content.single-page #next-page {
+    right: 2%;
+}
+
+#magazine-content.double-page #prev-page {
+    left: 2%;
+}
+
+#magazine-content.double-page #next-page {
+    right: 2%;
+}
+
+/* Éviter la superposition avec le PDF */
+#magazine-content canvas {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+    z-index: 10; /* Juste en dessous des boutons */
+}
